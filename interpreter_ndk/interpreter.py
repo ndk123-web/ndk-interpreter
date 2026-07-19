@@ -1,7 +1,9 @@
 from ast_ndk.print_node import PrintNode
 from ast_ndk.define_identifier import DefineIdentifierNode
 from ast_ndk.addition_node import AdditionNode
-
+from ast_ndk.substraction_node import SubstractionNode
+from ast_ndk.multiplication_node import MultiplicationNode
+from ast_ndk.division_node import DivisionNode
 
 class InterpreterNdk:
 
@@ -19,6 +21,20 @@ class InterpreterNdk:
 
             elif isinstance(line, AdditionNode):
                 result = line.left + line.right
+                self.global_scope[line.identifier_name] = result
+            
+            elif isinstance(line, SubstractionNode):
+                result = line.left - line.right
+                self.global_scope[line.identifier_name] = result
+            
+            elif isinstance(line, MultiplicationNode):
+                result = line.left * line.right
+                self.global_scope[line.identifier_name] = result
+            
+            elif isinstance(line, DivisionNode):
+                if line.right == 0:
+                    raise Exception("Division by zero is not allowed.")
+                result = line.left / line.right
                 self.global_scope[line.identifier_name] = result
 
             else:

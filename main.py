@@ -19,4 +19,6 @@ if __name__ == "__main__":
         ipr = InterpreterNdk()
         ipr.run(ast)
 
+        print() 
+        print() 
         print("Global Scope: ", ipr.get_global_scope())

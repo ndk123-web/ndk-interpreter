@@ -63,6 +63,15 @@ def lexer(source_code: str):
 
         elif ch == "+":
             tokens.append((ch, keywords[ch]))
+        
+        elif ch == "-":
+            tokens.append((ch, keywords[ch]))
+        
+        elif ch == "*":
+            tokens.append((ch, keywords[ch]))
+            
+        elif ch == "/":
+            tokens.append((ch, keywords[ch]))
 
         elif word in keywords:
             tokens.append((word, keywords[word]))
