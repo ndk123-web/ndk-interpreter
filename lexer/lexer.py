@@ -40,6 +40,16 @@ def lexer(source_code: str):
 
         ch = source_code[position]
 
+        # if the character is a forward slash and the next character is also a forward slash, we have a comment, so we skip it
+        if ch == "/" and position + 1 < size and source_code[position + 1] == "/":
+            flush_word()
+            position += 2
+
+            while position < size and source_code[position] != "\n":
+                position += 1
+
+            continue
+
         if ch.isalpha():
             word += ch
 
