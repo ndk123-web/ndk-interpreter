@@ -1,0 +1,8 @@
+print("Hi My Name is")
+print("Ndk")
+
+let name = "Ndk"
+
+let sum = 10 + 20;
+let a = 10;
+let b = 20;
