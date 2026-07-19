@@ -17,9 +17,9 @@ def parser(tokens):
 
     while position < size:
         if tokens[position][0] == "print":
-            s, pos = parse_print(tokens, position)
+            s, pos, identifier_name = parse_print(tokens, position)
             position = pos
-            ast.append(PrintNode(s))
+            ast.append(PrintNode(s, blocks=0, identifier=identifier_name))
 
         elif tokens[position][0] == "let":
             operator_position = position + 4

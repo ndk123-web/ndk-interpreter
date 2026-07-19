@@ -10,8 +10,18 @@ def parse_print(tokens, position):
         raise Exception("( required")
     position += 1
 
-    value, string_value = tokens[position]
-    if value != "STRING":
+    # there might be either STRING or IDENTIFIER after print(, so we check for both cases
+    value, token_type = tokens[position]
+    identifier_name = None
+
+    if token_type == "IDENTIFIER":
+        identifier_name = value
+        string_value = None
+
+    elif value == "STRING":
+        string_value = token_type
+
+    else:
         raise Exception("String required")
 
     position += 1
@@ -34,4 +44,4 @@ def parse_print(tokens, position):
 
     # EOF or next statement -> do nothing
 
-    return (string_value, position)
+    return (string_value, position, identifier_name)

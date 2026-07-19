@@ -7,3 +7,5 @@ let add = 20+10;
 let sub = 20-10;
 let mul = 1*3;
 let div = 3/2;
+
+print(add);

@@ -13,8 +13,16 @@ class InterpreterNdk:
     def run(self, ast):
 
         for line in ast:
+            
             if isinstance(line, PrintNode):
-                print(line.value)
+                # either normal string or identifier_name 
+                if line.identifier is not None:
+                    if line.identifier in self.global_scope:
+                        print(self.global_scope[line.identifier])
+                    else:
+                        raise Exception(f"Undefined identifier: {line.identifier}")
+                else:
+                    print(line.value)
 
             elif isinstance(line, DefineIdentifierNode):
                 self.global_scope[line.identifier_name] = line.value
