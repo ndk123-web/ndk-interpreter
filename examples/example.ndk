@@ -9,3 +9,4 @@ let mul = 1*3;
 let div = 3/2;
 
 print(add);
+print(s);
