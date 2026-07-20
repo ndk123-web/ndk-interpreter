@@ -1,39 +1,39 @@
 # NDK Language Support
 
-`ndk-language-support` ek VS Code extension hai jo NDK language ke `.ndk` files ke liye editor support provide karta hai.
+`ndk-language-support` is a VS Code extension that provides editor support for NDK language `.ndk` files.
 
 ## What It Is
 
-Ye extension mainly in cheezon ke liye hai:
+This extension is mainly for the following:
 
-1. `.ndk` files ko recognize karna
-2. syntax highlighting dena
-3. editor mein NDK code ko easier read aur write karna
-4. NDK language ke saath VS Code experience ko better banana
+1. Recognizing `.ndk` files
+2. Providing syntax highlighting
+3. Making NDK code easier to read and write in the editor
+4. Improving the VS Code experience for the NDK language
 
 ## Install
 
-Extension ko VS Code Marketplace se install kiya ja sakta hai:
+You can install the extension from the VS Code Marketplace:
 
 <https://marketplace.visualstudio.com/items?itemName=ndkdev.ndk-lang-support>
 
 ## How It Relates To The Interpreter
 
-Ye extension interpreter ka replacement nahi hai. Ye sirf editor support hai.
+This extension is not a replacement for the interpreter. It only provides editor support.
 
-- `ndk-language-support` = VS Code mein `.ndk` files ke liye support
-- `ndk-interpreter` = `.ndk` code ko actually process aur run karne wala project
+- `ndk-language-support` = support for `.ndk` files in VS Code
+- `ndk-interpreter` = the project that actually processes and runs `.ndk` code
 
 ## Language Flow
 
-NDK code ka processing flow generally ye hota hai:
+The processing flow for NDK code is generally:
 
 `example.ndk` -> `lexer` -> `parser` -> `AST` -> `interpreter`
 
-1. `lexer` source code ko tokens mein todta hai.
-2. `parser` grammar aur syntax rules check karta hai.
-3. `AST` statements ko structured representation mein convert karta hai.
-4. `interpreter` us structure ko execute karke output deta hai.
+1. The `lexer` breaks source code into tokens.
+2. The `parser` checks grammar and syntax rules.
+3. The `AST` converts statements into a structured representation.
+4. The `interpreter` executes that structure and produces output.
 
 ## Example
 
@@ -41,7 +41,7 @@ NDK code ka processing flow generally ye hota hai:
 // Normal string printing in stdout
 print("Hello I am ndk")
 
-// declaring string and integers values
+// declaring string and integer values
 let a = 10;
 let s = "hello this is string not print yet";
 
@@ -51,11 +51,11 @@ let sub = 20 - 10;
 let mul = 1 * 3;
 let div = 3 / 2;
 
-// print variables from global environment
+// print variables from the global environment
 print(add);
 print(s);
 ```
 
 ## Packaging
 
-Extension package banane ke liye `vsce package` use hota hai. Isse `.vsix` file generate hoti hai, jise VS Code mein install kiya ja sakta hai.
+Use `vsce package` to generate the extension package. This creates a `.vsix` file, which can then be installed in VS Code.
