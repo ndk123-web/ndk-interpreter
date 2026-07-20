@@ -1,4 +1,3 @@
-
 // Normal string printing in stdout
 print("Hello I am ndk")
 

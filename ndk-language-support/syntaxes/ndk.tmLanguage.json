@@ -1,0 +1,61 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Ndk",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+
+        "keywords": {
+            "patterns": [
+                {
+                    "match": "\\b(let|print)\\b",
+                    "name": "keyword.control.ndk"
+                }
+            ]
+        },
+
+        "strings": {
+            "patterns": [
+                {
+                    "begin": "\"",
+                    "end": "\"",
+                    "name": "string.quoted.double.ndk"
+                }
+            ]
+        },
+
+        "numbers": {
+            "patterns": [
+                {
+                    "match": "\\b\\d+\\b",
+                    "name": "constant.numeric.ndk"
+                }
+            ]
+        },
+
+        "operators": {
+            "patterns": [
+                {
+                    "match": "=|\\+|-|\\*|/",
+                    "name": "keyword.operator.ndk"
+                }
+            ]
+        },
+
+        "comments": {
+            "patterns": [
+                {
+                    "match": "//.*$",
+                    "name": "comment.line.double-slash.ndk"
+                }
+            ]
+        }},
+		
+	"scopeName": "source.ndk"
+}

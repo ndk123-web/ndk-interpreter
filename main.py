@@ -13,7 +13,7 @@ if __name__ == "__main__":
         ast = parser(tokens)
         # print("AST: ", ast)
 
-        
+
         ipr = InterpreterNdk()
         ipr.run(ast)
 

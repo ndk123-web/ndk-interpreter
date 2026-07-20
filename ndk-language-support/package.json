@@ -1,0 +1,41 @@
+{
+  "name": "ndk",
+  "displayName": "Ndk Language Support",
+  "description": "small interpreter",
+  "icon": "ndk-icon.png",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.125.0"
+  },
+  "type": "module",
+  "allowImportingTsExtensions": true,
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "ndk",
+        "aliases": [
+          "Ndk",
+          "ndk"
+        ],
+        "extensions": [
+          ".ndk"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ndk",
+        "scopeName": "source.ndk",
+        "path": "./syntaxes/ndk.tmLanguage.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.125.0",
+    "typescript": "^7.0.2"
+  }
+}
