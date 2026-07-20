@@ -1,18 +1,18 @@
 {
-  "name": "ndk-language-support",
-  "displayName": "Ndk Language Support",
+  "name": "ndk-lang-support",
+  "displayName": "NDK Syntax Highlighter & automcomplete",
   "description": "Syntax highlighting and language support for the NDK programming language.",
   "icon": "ndk-icon.png",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.125.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ndk123-web/ndk-interpreter/ndk-language-support"
+    "url": "https://github.com/ndk123-web/ndk-interpreter/"
   },
-  "homepage": "https://github.com/ndk123-web/ndk-language-support",
+  "homepage": "https://github.com/ndk123-web/ndk-interpreter/",
   "publisher": "ndkdev",
   "type": "module",
   "allowImportingTsExtensions": true,
